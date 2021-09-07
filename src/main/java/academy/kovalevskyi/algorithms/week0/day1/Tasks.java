@@ -8,8 +8,8 @@ public class Tasks {
   }
 
   public static int findMiddleInOneGo(Node start) {
-    if (start == null || start.next == null) {
-      return -1;
+    if (start.next == null) {
+      return start.value;
     }
     Node middle = start;
     Node current = start;
