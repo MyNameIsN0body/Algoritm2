@@ -1,6 +1,5 @@
 package academy.kovalevskyi.algorithms.week0.day0;
 
-
 public class Tasks {
   public static void main(String[] args) {
     System.out.println(sameCharactersSorting("Hello", "Hello"));
