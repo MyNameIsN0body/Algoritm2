@@ -10,7 +10,10 @@ public class MergeSort implements Sort {
     if (target == null || comparator == null) {
       return;
     }
-    doSort(target, 0, target.length - 1, comparator);
+    T[] result = createSortedArray(target, comparator);
+    System.arraycopy(result, 0, target, 0, result.length);
+    //doSort(target, 0, target.length - 1, comparator);
+
   }
 
   private <T> void doSort(T[] arr, int left, int right, Comparator<T> comparator) {
@@ -46,7 +49,7 @@ public class MergeSort implements Sort {
 
   public <T> T[] createSortedArray(final T[] target, final Comparator<T> comparator) {
     T[] result = Arrays.copyOf(target, target.length);
-    sort(result, comparator);
+    doSort(result, 0, target.length - 1, comparator);
     return result;
   }
 
