@@ -17,6 +17,6 @@ public class Tasks {
         return OptionalInt.of(mid);
       }
     }
-    return OptionalInt.of(-1);
+    return OptionalInt.empty();
   }
 }
