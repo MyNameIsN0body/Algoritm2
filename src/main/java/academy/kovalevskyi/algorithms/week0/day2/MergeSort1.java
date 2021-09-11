@@ -52,6 +52,7 @@ public class MergeSort1 implements Sort {
     sort(result, comparator);
     return  result;
   }
+
   @Override
   public String complexityBest() {
     return "N*log(N)";
