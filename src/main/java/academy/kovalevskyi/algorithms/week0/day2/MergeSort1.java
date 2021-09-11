@@ -4,7 +4,7 @@ import academy.kovalevskyi.algorithms.week0.day0.Sort;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class MergeSort implements Sort {
+public class MergeSort1 implements Sort {
 
   @Override
   public <T> void sort(T[] target, Comparator<T> comparator) {
@@ -46,6 +46,12 @@ public class MergeSort implements Sort {
     }
   }
 
+
+  public <T> T[] createSortedArray(final T[] target, final Comparator<T> comparator) {
+    T[] result = Arrays.copyOf(target, target.length);
+    sort(result, comparator);
+    return  result;
+  }
   @Override
   public String complexityBest() {
     return "N*log(N)";
