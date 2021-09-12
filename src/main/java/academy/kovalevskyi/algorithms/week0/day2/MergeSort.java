@@ -1,7 +1,6 @@
 package academy.kovalevskyi.algorithms.week0.day2;
 
 import academy.kovalevskyi.algorithms.week0.day0.Sort;
-import java.util.Arrays;
 import java.util.Comparator;
 
 public class MergeSort implements Sort {
@@ -11,7 +10,6 @@ public class MergeSort implements Sort {
       return;
     }
     doSort(target, 0, target.length - 1, comparator);
-
   }
 
   private <T> void doSort(T[] arr, int left, int right, Comparator<T> comparator) {
