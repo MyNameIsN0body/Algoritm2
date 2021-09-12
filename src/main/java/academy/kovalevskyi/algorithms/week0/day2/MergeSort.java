@@ -45,12 +45,6 @@ public class MergeSort implements Sort {
     System.arraycopy(temp, 0, arr, left, length);
   }
 
-  public <T> T[] createSortedArray(final T[] target, final Comparator<T> comparator) {
-    T[] result = Arrays.copyOf(target, target.length);
-    doSort(result, 0, target.length - 1, comparator);
-    return result;
-  }
-
   @Override
   public String complexityBest() {
     return "N*log(N)";
