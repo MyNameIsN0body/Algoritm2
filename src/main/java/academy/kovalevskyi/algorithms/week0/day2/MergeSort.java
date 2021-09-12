@@ -10,9 +10,7 @@ public class MergeSort implements Sort {
     if (target == null || comparator == null) {
       return;
     }
-    T[] result = createSortedArray(target, comparator);
-    System.arraycopy(result, 0, target, 0, result.length);
-    //doSort(target, 0, target.length - 1, comparator);
+    doSort(target, 0, target.length - 1, comparator);
 
   }
 
