@@ -18,10 +18,13 @@ public class IntGraphHelper {
   }
 
   private static boolean findNode(GraphBinaryNode<Integer> root, Integer value) {
-    if (root == null || root.value() == null) {
-      return false;
-    } else if (root.value() < value) {
-      return findNode()
+
+    if (root.value() <= value) {
+      return findNode(root.left(),value);
     }
+    if (root.value() >= value) {
+      return findNode(root.right(), value);
+    }
+    return value == root.value();
   }
 }
